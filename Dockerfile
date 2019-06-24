@@ -9,8 +9,8 @@ COPY . /app
 # Install dependencies
 RUN npm install --silent
 
-# Make port 80 available to the world outside this container
-EXPOSE 80
+# Make port 90 available to the world outside this container
+EXPOSE 90
 
 # Run app when the container launches
 CMD [ "npm", "start" ]
