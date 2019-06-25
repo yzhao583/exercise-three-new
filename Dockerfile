@@ -6,6 +6,9 @@ RUN groupadd -g 999 appuser && \
 USER appuser
 
 # Create app directory
+RUN mkdir /app
+RUN chown 999:999 /app
+
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
