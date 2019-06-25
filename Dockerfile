@@ -12,7 +12,7 @@ WORKDIR /app
 COPY . /app
 
 # Install dependencies
-RUN npm install --silent
+RUN npm install
 
 # Make port 90 available to the world outside this container
 EXPOSE 90
