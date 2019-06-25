@@ -1,5 +1,10 @@
 FROM node:10
 
+#Avoid process in container run as root
+RUN groupadd -g 999 appuser && \
+    useradd -r -u 999 -g appuser appuser
+USER appuser
+
 # Create app directory
 WORKDIR /app
 
