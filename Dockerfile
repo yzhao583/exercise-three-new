@@ -3,11 +3,13 @@ FROM node:10
 #Avoid process in container run as root
 RUN groupadd -g 999 appuser && \
     useradd -r -u 999 -g appuser appuser
-USER appuser
 
 # Create app directory
-RUN mkdir /app
+RUN mkdir -p /app
 RUN chown 999:999 /app
+
+#Switch user
+USER appuser
 
 WORKDIR /app
 
