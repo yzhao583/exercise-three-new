@@ -8,6 +8,8 @@ RUN groupadd -g 999 appuser && \
 RUN mkdir -p /app
 RUN chown appuser:appuser /app
 
+ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
+
 #Switch user
 USER appuser
 
