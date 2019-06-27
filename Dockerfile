@@ -6,6 +6,7 @@ RUN groupadd -g 999 appuser && \
 
 # Create app directory
 RUN mkdir -p /app
+RUN chmod -R 777 /app
 RUN chown appuser:appuser /app
 
 #Switch user
